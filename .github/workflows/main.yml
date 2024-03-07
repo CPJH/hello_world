@@ -1,0 +1,23 @@
+name: Hello
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "*.sh"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Install needed packages
+        run: |
+          apt update && apt install python3 && apt -y install python3-yaml
