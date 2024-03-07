@@ -20,4 +20,4 @@ jobs:
 
       - name: Install needed packages
         run: |
-          sudo apt update && apt install python3 && apt -y install python3-yaml
+          sudo apt update && sudo apt install python3 && sudo apt -y install python3-yaml
