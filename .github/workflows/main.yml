@@ -18,7 +18,8 @@ jobs:
         with:
           fetch-depth: 2
         with:
-          ref: ${{ github.event_name == 'workflow_dispatch' && 'master' || github.event.pull_request.head.ref }}
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'main' || github.event.pull_request.head.ref }}
+          
       - name: Install needed packages
         run: |
           sudo apt update && sudo apt install python3 && sudo apt -y install python3-yaml
