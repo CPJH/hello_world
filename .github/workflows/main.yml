@@ -24,6 +24,6 @@ jobs:
 
       - name: run cmd
         run: |
-          cat helo-world.sh
+          cat helo.sh
 
           
