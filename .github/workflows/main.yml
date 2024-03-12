@@ -21,3 +21,9 @@ jobs:
       - name: Install needed packages
         run: |
           sudo apt update && sudo apt install python3 && sudo apt -y install python3-yaml
+
+      - name: run cmd
+        run: |
+          cat helo-world.sh
+
+          
